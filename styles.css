@@ -6,44 +6,37 @@ body {
     text-align: center;
 }
 
-.topLogo {
-    font-family: 'Dancing Script', cursive;
+.navbar{
+  padding: 0;
+}
+.navContainer{
+  background-color: rgb(217, 160, 188);
+
+}
+
+.nav-item a{
+  text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: 'Maven Pro', sans-serif;
+}
+.navbarLogo{
+  font-family: 'Dancing Script', cursive;
     text-decoration: none;
     color: #ffffff;
     font-size: 2rem;
     float: left;
     padding: 1rem;
-}
 
-.topLogo:hover {
+}
+.navbarLogo:hover {
     text-shadow: rgb(237, 215, 231) 1px 0 10px;
 }
 
-.navItims ul li {
-    text-align: center;
-    display: inline-block;
-    margin: 30px;
-    padding: 10px;
-
-}
-
-.navItims li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-family: 'Maven Pro', sans-serif;
-}
-
-
-.w3rcontainer{
-    border: 1px solid #cccfdb;
-    border-radius: 2px;
- } 
- .hover-underline-animation {
+.hover-underline-animation {
    display: inline-block;
    position: relative;
-   color: 
- #ffffff;
+   color: #ffffff;
  }
  
  .hover-underline-animation:after {
@@ -74,10 +67,15 @@ body {
     margin: 0;
     width: 100%;
 }
+h1{
+  color: rgb(255, 254, 255);
+  font-family: 'Maven Pro', sans-serif;
 
-h1,h3 {
-    font-family: 'Maven Pro', sans-serif;
+}
 
+h1 span{
+
+  color: #683747;
 }
 
 .cards {
@@ -109,15 +107,21 @@ h1,h3 {
     
   }
 
-
-
-.dot {
-    height: 20rem;
-    width: 20rem;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
+h1{
+    color: #ffffff;
 }
+
+h2,.h2 {
+    color: rgb(147, 65, 94);
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+h5{
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
 
 .dot2 {
     height: 3rem;
@@ -125,8 +129,18 @@ h1,h3 {
     background-color: #8e5876;
     border-radius: 50%;
     margin: 5px;
+   
 }
 
+.dot2 i {
+  margin-top: 18px;
+  margin-left: 17px;
+   color: #ffedf4;
+}
+
+.dot2Container{
+  z-index: 2;
+}
 
 .dot2Container .dot2:hover::before {
     transform: scale(1.1);
@@ -163,6 +177,7 @@ h1,h3 {
     -webkit-text-fill-color: rgba(233, 163, 178, 0.286);
 }
 
+
 @keyframes animate {
     0% {
         background-position: -500%;
@@ -171,6 +186,10 @@ h1,h3 {
     100% {
         background-position: 500%;
     }
+}
+
+#education,#projects{
+    background-color: #f8f9fa;
 }
 
 .langDivs{
@@ -193,6 +212,9 @@ h1,h3 {
 
 }
 
+.angleDown{
+  color: #ffff; text-decoration: none; 
+}
 .angle-down a i:hover{
     
     transform: translateY(5px) scale(1.001);
@@ -266,3 +288,164 @@ h1,h3 {
 }
 
 
+.card {
+    width: 24rem;
+    height: 28rem;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: rgb(9, 8, 8);
+    
+}
+
+    .imgCard{
+      position: absolute;
+      object-fit: cover;
+      width: 20rem;
+      height: 20rem;
+      top: 0;
+      left: 0;
+      opacity: 0.9;
+      transition: opacity .2s ease-out;
+    }
+  
+    .cardHead {
+      color:rgb(128, 47, 82)0;
+      inset: auto auto 30px 30px;
+      margin: 0;
+      transition: inset .3s .3s ease-out;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+    
+    .cardTexts, .buttonCard {
+      position: absolute;
+      opacity: 0;
+      max-width: 80%;
+      transition: opacity .3s ease-out;
+    }
+    
+    .cardTexts {
+      inset: auto auto 80px 30px;
+    }
+    
+    .buttonCard {
+      inset: auto auto 40px 30px;
+      color: inherit;
+      text-decoration: none;
+    }
+    
+    .cardTexts .buttonCard:hover h2 {
+      inset: auto auto 220px 30px;
+      transition: inset .3s ease-out;
+    }
+    
+    .cardTexts:hover, .buttonCard:hover  {
+      opacity: 1;
+      transition: opacity .5s .1s ease-in;
+    }
+    
+    .cardTexts:hover img {
+      transition: opacity .3s ease-in;
+      opacity: 1;
+    }
+  
+  
+  
+  .material-symbols-outlined {
+    vertical-align: middle;
+  }
+  
+
+
+  /* ------------------------------------- */
+  .topnav {
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    color: black;
+  }
+  
+  .topnav a.active {
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+
+  .skills{
+    color: #817e7e;
+    font-size: small;
+    
+  }
+
+  footer a{
+    text-decoration: none;
+  }
+
+  .projectLinks{
+    float: left;
+    color: #837d7d;
+  }
+
+  .projectLinks:hover{
+    text-shadow: rgb(211, 210, 211) 2px 0 10px;
+  }
+
+
+  #education, #projects{
+    background-color: white;
+  }
+
+  .footer .container{
+    color: #60404d;
+  }
+
+  .projectsDivs{
+    padding-top: 100px; 
+    padding-bottom: 100px;
+  }
+
+  #resume-btn a{
+    text-decoration: none;
+     color: #191717; 
+  }
+
+  .card{
+    z-index: 1;
+  }
